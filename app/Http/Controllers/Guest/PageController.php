@@ -16,7 +16,7 @@ class PageController extends Controller
             'movies' => $movies
         ];
 
-        return view('layouts.movies');
+        return view('layouts.movies', $data);
     }//
 
     // public function items(){

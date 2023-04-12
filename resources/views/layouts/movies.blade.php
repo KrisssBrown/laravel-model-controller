@@ -17,14 +17,19 @@
 
 <body>
 
-    <div class="container">
-        @foreach ($Movies as $Movie)
-            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                <div class="card-header">Header</div>
+    <div class="container row justify-content-center gap-3 mx-auto py-3">
+        @foreach ($movies as $movie)
+            <div class="card text-white bg-primary mb-3 col-3" style="max-width: 18rem;">
+                <div class="card-header">
+                    <h1>
+                        {{ $movie->title }}
+                    </h1>
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">Primary card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                    <h5 class="card-title">{{ $movie->original_title }}</h5>
+                    <p class="card-text">{{ $movie->nationality }}</p>
+                    <p class="card-text">{{ $movie->date }}</p>
+                    <p class="card-text">{{ $movie->vote }}</p>
                 </div>
             </div>
         @endforeach
